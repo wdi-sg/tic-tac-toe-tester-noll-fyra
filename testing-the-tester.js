@@ -1,17 +1,17 @@
-var movesTaken = []
+// var movesTaken = []
 var grid = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 var playerOneActive = true
-var isDraw = false
+var isDraw = 0
 
 // reset the game variables
 function restart () {
-  movesTaken = []
+  // movesTaken = []
   grid = [0, 1, 2, 3, 4, 5, 6, 7, 8]
   playerOneActive = true
-  isDraw = false
+  isDraw = 0
 }
 
-// checks if a winning combination is met or the last piece is placed
+// checks if a winning combination is met
 function isGameOver () {
   switch (true) {
     // top row
@@ -38,10 +38,6 @@ function isGameOver () {
     // diagonal /
     case (grid[2] === grid[4] && grid[4] === grid[6]):
       return true
-    // draw
-    case (movesTaken.length === 9):
-      isDraw = true
-      break
     default:
       return false
   }
@@ -54,7 +50,7 @@ function whoWon () {
       return 1
     case (isGameOver() && !playerOneActive):
       return 2
-    case (isDraw):
+    case (isDraw === 9):
       return 3
     default:
       return 0
@@ -63,11 +59,11 @@ function whoWon () {
 
 // checks if the move is valid and changes the active player
 function playTurn (index) {
-  if (movesTaken.includes(index)) {
+  if (typeof grid[index] === 'boolean') {
     return false
   } else {
-    movesTaken.push(index)
     grid[index] = playerOneActive
+    isDraw += 1
     if (!isGameOver()) {
       playerOneActive = !playerOneActive
     }
