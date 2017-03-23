@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  width: 90%;
+  justify-content: center;
+  text-align: center;
+}
+
+.grid {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  background-color: black;
+  width: 33.33%;
+  height: 33.33%;
+  border: 1px solid white;
+  padding: 10px;
+  color: white;
+  font-size: 100px;
+}

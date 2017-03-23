@@ -1,0 +1,21 @@
+body {
+    background-color: #FFF;
+    margin: 10 auto
+}
+
+#container {
+    min-width: 500px;
+    min-height: 500px;
+    background-color: white;
+    border: 5px black solid;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#mouse {
+    transform: scaleX(1);
+    position: relative;
+    left: 50px;
+    top: 50px;
+    transition: left .5s ease-in, top .5s ease-in;
+}
