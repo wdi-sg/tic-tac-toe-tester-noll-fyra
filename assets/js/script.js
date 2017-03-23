@@ -17,9 +17,9 @@ $(document).ready(function () {
   function restart () {
     grid = [0, 1, 2, 3, 4, 5, 6, 7, 8]
     playerOneActive = true
+    isDraw = 0
     $('.active-player').text('Active: Player 1')
     $('.box').css('background-color', 'black')
-    isDraw = 0
     $('.box').each(function () { $(this).text('') })
     clickCounter = 0
   }

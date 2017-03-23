@@ -26,3 +26,24 @@
   color: white;
   font-size: 100px;
 }
+
+button {
+  background-color: black;
+  color: white;
+  width: 300px;
+  font-size: 20px;
+  border: 2px solid white;
+  border-radius: 20px;
+  box-shadow: 0 5px #666;
+  padding: 2px;
+}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.box:active {
+  transform: translateY(4px);
+}
